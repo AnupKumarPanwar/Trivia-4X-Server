@@ -1,0 +1,42 @@
+<ion-view view-title="Dashboard" hide-nav-bar="true">
+  <ion-content class="padding" style="background:url('img/login.png'); background-size: contain; text-align: center;">
+    <style type="text/css">
+      .red_button
+      {
+        color:  white;
+        background: #e6296d;
+        border-radius: 38px;
+        font-size:  20px;
+        height:  60px;
+        text-align:  center;
+        border: 0px;
+        width:  244px;
+      }
+
+      .input_fields
+      {
+        padding: 30px !important;
+        font-size:  15px !important;
+        height: 60px !important;
+        width: 300px !important;
+        line-height: 30px !important;
+        border-radius: 38px !important;
+        margin-left: 15%;
+      }
+    </style>
+    <div style="text-align: center !important; top: 20%; position: absolute;">
+          <input type="text" name="otp" placeholder="OTP" class="input_fields">
+        </div>
+    </div>
+
+    <div style="text-align: center; width: 100%; position: fixed; bottom: 10%;">
+        <button ion-item class="red_button" ng-click="verifyOYP()">
+          Continue
+        </button>
+    </div>
+
+<!--     <div style="text-align: center; color: white; position: fixed; bottom: 10%; width: 100%; font-size:19px;">
+        Create Account
+    </div> -->
+  </ion-content>
+</ion-view>
