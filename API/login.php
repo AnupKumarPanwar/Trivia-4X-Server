@@ -17,45 +17,31 @@ if (!$conn)
     die(json_encode($response));
 }
 
-if (isset($_POST['email']) && isset($_POST['password']))
+if (isset($_POST['phone']))
 {
    
-    $email = mysqli_escape_string($conn, $_POST['email']);
-    $password = mysqli_escape_string($conn, $_POST['password']);
+    $phone = mysqli_escape_string($conn, $_POST['phone']);
    
-    $get_user_info = "SELECT username, balance, lives, is_verified FROM users WHERE email='$email' and password='$password'";
+    $get_user_info = "SELECT username, balance, lives FROM users WHERE phone='$phone'";
     $result = mysqli_query($conn, $get_user_info);
     if (mysqli_num_rows($result) != 0)
     {
         $r=mysqli_fetch_assoc($result);
-
-        if ($r['is_verified']==1) {            
-            $response = array(
-                'result' => array(
-                    'status' => '1',
-                    'username' => $r['username'],
-                    'balance' => $r['balance'],
-                    'lives' => $r['lives']
-                )
-            );
-            die(json_encode($response));
-        }
-        else
-        {
-             $response = array(
-                'result' => array(
-                    'status' => '2'
-                )
-            );
-            die(json_encode($response));
-        }
+        $response = array(
+            'result' => array(
+                'status' => '1',
+                'username' => $r['username'],
+                'balance' => $r['balance'],
+                'lives' => $r['lives']
+            )
+        );
+        die(json_encode($response));
     }
     else
     {
         $response = array(
             'result' => array(
-                'status' => '0',
-                'data' => 'Invalid credentials'
+                'status' => '2'
             )
         );
         die(json_encode($response));

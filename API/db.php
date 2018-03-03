@@ -3,13 +3,13 @@
 	// $dbServer = 'localhost'; //Define database server host
 	// $dbUsername = 'root'; //Define database username
 	// $dbPassword = ''; //Define database password
-	// $dbName = 'triviaus'; //Define database name
+	// $dbName = 'triviazq'; //Define database name
 
 
 	// $dbServer = 'localhost'; //Define database server host
-	// $dbUsername = 'id4858009_root'; //Define database username
+	// $dbUsername = 'id4767700_root'; //Define database username
 	// $dbPassword = 'biappanwar'; //Define database password
-	// $dbName = 'id4858009_triviaus'; //Define database name
+	// $dbName = 'id4767700_triviazq'; //Define database name
 
 	$dbServer = 'localhost'; //Define database server host
 	$dbUsername = 'dynamite'; //Define database username

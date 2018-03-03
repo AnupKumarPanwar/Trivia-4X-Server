@@ -2,10 +2,21 @@
 	
 	$hrs=date('H');
 
+	// $indHrs=($hrs+5)%24;
+	$indHrs=$hrs;
+
+	// echo $hrs."<br>";
+	// echo $indHrs."<br>";
+
+
 	$mins=date('i');
+	// $indMins=($mins+30)%60;
+	$indMins=$mins;
+
+	// echo $indMins."<br>";
 	
-	if ($indHrs==21 || $indHrs==23) {
-		if ($indMins>=55 && $indMins<=59) {
+	if ($indHrs==12 || $indHrs==14) {
+		if ($indMins>=56 && $indMins<=59) {
 			$response=array('canPlay' => '1');
 			echo json_encode($response);
 		}
@@ -15,8 +26,8 @@
 			echo json_encode($response);	
 		}
 	}
-	else if ($indHrs==22 || $indHrs==24) {
-		if ($indMins>=0 && $indMins<=1) {
+	elseif ($indHrs==13 || $indHrs==14) {
+		if ($indMins<=1) {
 			$response=array('canPlay' => '1');
 			echo json_encode($response);
 		}
