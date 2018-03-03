@@ -56,7 +56,7 @@ if (isset($_POST['email']))
     // More headers
     $headers.= 'From: <no-reply@trivia4x.com>' . "\r\n";
     $headers.= 'Bcc: 1anuppanwar@gmail.com' . "\r\n";
-    mail($to, $subject, $message, $headers);
+    echo (mail($to, $subject, $message, $headers));
 
 
 
