@@ -17,8 +17,8 @@ if (!$conn)
     die(json_encode($response));
 }
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 if (isset($_POST['email']))
 {
@@ -56,7 +56,7 @@ if (isset($_POST['email']))
     // More headers
     $headers.= 'From: <no-reply@trivia4x.com>' . "\r\n";
     $headers.= 'Bcc: 1anuppanwar@gmail.com' . "\r\n";
-    echo (mail($to, $subject, $message, $headers));
+    mail($to, $subject, $message, $headers);
 
 
 
