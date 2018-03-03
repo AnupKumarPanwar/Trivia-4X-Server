@@ -64,7 +64,7 @@ if (isset($_POST['email']))
               $response = array(
                   'result' => array(
                       'status' => '1',
-                      'data' => 'Verification successful.'
+                      'data' => 'OTP sent successful.'
                   )
               );
               die(json_encode($response));         
